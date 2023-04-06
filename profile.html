@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <!--
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>-->
+        <div class="login-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Username" name="username">
+            <input type="text" placeholder="Password" name="psw">
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'User')" id="defaultOpen">User</button>
+        <button class="tablinks" onclick="openCity(event, 'Family')" >Family</button>
+        <button class="tablinks" onclick="openCity(event, 'Events')">Events</button>
+        <button class="tablinks" onclick="openCity(event, 'Anecdotes')">Anecdotes</button>
+      </div>
+      <div id="User" class="tabcontent">
+        <h3>User Data</h3>
+        <div class="myImg">
+        <img id="myImg" src="https://www.w3schools.com/w3images/avatar3.png" alt="Avatar" style="width:200%;max-width:200px">
+        </div>
+        <div class="bioInfo">
+        <p>Patient Name: John Doe</p>
+        <p>Patient Age: 27</p>
+        <p>Patient Phone no: +1(123)456-789</p>
+        <p>Doctor's Name: Dr. Adams</p>
+        
+    </div>
+        <div class="Location"><p>Live location</p>
+            <img  src="GPS.jpg" alt="GPS" style="width:400%;max-width:400px">
+        </div>
+        <h1>Key Family and Friends Table</h1>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Relation</th>
+              <th>Phone no.</th>
+            </tr>
+            <tr>
+              <td>Mary Doe</td>
+              <td>Mother</td>
+              <td>....</td>
+            </tr>
+            <tr>
+              <td>Kevin Doe</td>
+              <td>Father</td>
+              <td>....</td>
+            </tr>
+            <tr>
+              <td>Adam Johnson</td>
+              <td>Friend</td>
+              <td>....</td>
+            </tr>
+          </table>
+      </div>
+      
+      <div id="Family" class="tabcontent">
+        <h3>Add Family and Friends</h3>
+        
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Relation</th>
+              <th>Phone no.</th>
+            </tr>
+            <tr>
+              <td>Mary Doe</td>
+              <td>Mother</td>
+              <td>....</td>
+            </tr>
+            <tr>
+              <td>Kevin Doe</td>
+              <td>Father</td>
+              <td>....</td>
+            </tr>
+            <tr>
+              <td>Adam Johnson</td>
+              <td>Friend</td>
+              <td>....</td>
+            </tr>
+          </table>
+        <div class="form">
+            <form action="action_page.php">
+          
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+          
+              <label for="famOrFri">Family or Friend</label>
+              <select id="famOrFri" name="famOrFri">
+                <option value="Family">Family</option>
+                <option value="Friend">Friend</option>
+                
+              </select>
+
+              <label for="relation">Relation</label>
+              <input type="text" id="relation" name="relation" placeholder="Your realtion to patient..">
+          
+              <label for="age">Age</label>
+              <input type="text" id="age" name="age" placeholder="Your age..">
+          
+              <label for="phone">Phone No.</label>
+              <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" placeholder="Your address..">
+          
+              <!-- <input type="submit" value="Submit"> -->
+          
+            </form>
+          </div>
+
+        <!--<div class="AddFam">
+            <h3>Name: ________________</h3>
+            <h4>**Friend or Family Check mark (TBA)</h4>
+            <h3>Relation: ________________</h3>
+            <h3>Age: ________________</h3>
+            <h3>Phone no: ________________</h3>
+            <h3>Address: ________________</h3>
+        </div>-->
+        <div class="Addbuttons">
+            <button class="btn save">Save</button>
+            <button class="btn delete">Delete</button>
+            <button class="btn more">Add More</button>
+        </div>
+      </div> 
+      
+      <div id="Events" class="tabcontent">
+
+        <h3>Add Events</h3>
+        <div class="month">      
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>
+                April<br>
+                <span style="font-size:18px">2023</span>
+              </li>
+            </ul>
+          </div>
+          
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+          
+          <ul class="days">  
+            <li>1</li>
+            <li>2</li>
+            <li><span class="active">3</span></li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</span></li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul>
+        <div class="form">
+            <form action="action_page.php">
+          
+              <label for="eventName"> Event Name</label>
+              <input type="text" id="eventName" name="eventName" placeholder="Enter the name of event..">
+
+              <label for="eventDate">Event Date</label>
+              <input type="text" id="eventDate" name="eventDate" placeholder="Enter the date of event..">
+          
+              <!-- <input type="submit" value="Submit"> -->
+          
+            </form>
+          </div>
+          <!-- 
+        <p>Event Name:________________</p>
+        <p>Event Date:________________</p>
+        <p>**Calender**(TBA)</p>-->
+        <div class="Addbuttons">
+            <button class="btn save">Save</button>
+            <button class="btn delete">Delete</button>
+            <button class="btn more">Add More</button>
+        </div>
+      </div>
+      
+      <div id="Anecdotes" class="tabcontent">
+        <h3>Add Anecdotes</h3>
+        
+        <div class="form">
+            <form action="action_page.php">
+          
+              <label for="anecName"> Anecdotes Name</label>
+              <input type="text" id="anecName" name="anecName" placeholder="Enter the name of the anecdote..">
+
+              <label for="anecDate">Anecdotes Date</label>
+              <input type="text" id="anecDate" name="anecDate" placeholder="Enter the date of the anecdote..">
+                
+              <label for="subject">Anecdotes Description</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <!-- <input type="submit" value="Submit"> -->
+          
+            </form>
+          </div> <!--
+        <p>Anecdotes Name:________________</p>
+        <p>Anecdotes Description:________________</p>-->
+        <div class="Addbuttons">
+            <button class="btn save">Save</button>
+            <button class="btn delete">Delete</button>
+            <button class="btn more">Add More</button>
+        </div>
+      </div>
+      <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+</body>
+</html>
