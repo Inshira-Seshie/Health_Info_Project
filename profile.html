@@ -27,48 +27,47 @@
         
       </div>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Patient')" id="defaultOpen">Patient</button>
+        <button class="tablinks" onclick="openCity(event, 'User')" id="defaultOpen">User</button>
         <button class="tablinks" onclick="openCity(event, 'Family')" >Family</button>
         <button class="tablinks" onclick="openCity(event, 'Events')">Events</button>
         <button class="tablinks" onclick="openCity(event, 'Anecdotes')">Anecdotes</button>
       </div>
-      <div id="Patient" class="tabcontent">
-        <h3>Patient Data</h3>
-        <div class="myImg ">
+      <div id="User" class="tabcontent">
+        <h3>User Data</h3>
+        <div class="myImg">
         <img id="myImg" src="https://www.w3schools.com/w3images/avatar3.png" alt="Avatar" style="width:200%;max-width:200px">
         </div>
         <div class="bioInfo">
-        <p>Patient Name: John Doe</p>
-        <p>Patient Age: 27</p>
-        <p>Patient Phone no: +1(123)456-789</p>
-        <p>Doctor's Name: Dr. Adams</p>
+        <p>Name: John Doe</p>
+        <p>Age: 27</p>
+        <p>Phone no: +1(123)456-789</p>
+        
         
     </div>
         <div class="Location"><p>Live location</p>
             <img  src="GPS.jpg" alt="GPS" style="width:400%;max-width:400px">
         </div>
-        <h1>Key Family and Friends</h1>
+        <h1>Patients</h1>
         <table>
             <tr>
               <th>Name</th>
-              <th>Relation</th>
+              <th>Age</th>
+              <th>Condtion</th>
               <th>Phone no.</th>
             </tr>
             <tr>
               <td>Mary Doe</td>
-              <td>Mother</td>
+              <td>55</td>
+              <td>Alzheimers - 4 years</td>
               <td>....</td>
             </tr>
             <tr>
-              <td>Kevin Doe</td>
-              <td>Father</td>
+              <td>Kevin Loue</td>
+              <td>67</td>
+              <td>Alzheimers - 6 years</td>
               <td>....</td>
             </tr>
-            <tr>
-              <td>Adam Johnson</td>
-              <td>Friend</td>
-              <td>....</td>
-            </tr>
+            
           </table>
       </div>
       
@@ -236,14 +235,14 @@
       
       <div id="Anecdotes" class="tabcontent">
         <h3>Add Anecdotes</h3>
-        <div class=" w3-card w3-white w3-round w3-margin"><br>
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
           <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">16 min</span>
-          <h4>Jane Doe</h4><br>
+          <span class="w3-right w3-opacity">4/12/23</span>
+          <h4>Emily Doe</h4><br>
           <hr class="w3-clear">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+          <!--<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> -->
         </div> 
         <div class="Addbuttons">
           <button class="btn more" onclick="openAForm()">Add Anecdote</button>
