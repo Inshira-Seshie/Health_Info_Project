@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
+        <!-- DayPilot library -->
+    <link href="calendar.css" rel="stylesheet">
+    <script defer src="calendar.js"></script>
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
@@ -50,8 +53,8 @@
         <div class="patcards">
           <div class="w3-card w3-round w3-white w3-hover-shadow card">
             <div class="w3-container">
-             <h4 class="w3-center">Patient 1</h4>
-             <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+             <h4 class="w3-center">John Doe</h4>
+             <p class="w3-center"><img src="OldMan.avif" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
              <hr>
              <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
              <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
@@ -61,48 +64,18 @@
          
             <div class="w3-card w3-round w3-white w3-hover-shadow card">
               <div class="w3-container">
-               <h4 class="w3-center">Patient 2</h4>
-               <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+               <h4 class="w3-center">Carla Doe</h4>
+               <p class="w3-center"><img src="Oldwoman.avif" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
                <hr>
                <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
                <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
                <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
               </div>
             </div>
-            <div class="w3-card w3-round w3-white w3-hover-shadow card">
-              <div class="w3-container">
-               <h4 class="w3-center">Patient 3</h4>
-               <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
-               <hr>
-               <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
-               <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
-               <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
-              </div>
-            </div>
+          
           </div>
         </div>
-        <!-- <h1>Patients</h1>
-        <table>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Condtion</th>
-              <th>Phone no.</th>
-            </tr>
-            <tr>
-              <td>Mary Doe</td>
-              <td>55</td>
-              <td>Alzheimers - 4 years</td>
-              <td>....</td>
-            </tr>
-            <tr>
-              <td>Kevin Loue</td>
-              <td>67</td>
-              <td>Alzheimers - 6 years</td>
-              <td>....</td>
-            </tr>
-            
-          </table> -->
+       
       </div>
       
       <div id="Family" class="tabcontent">
@@ -182,89 +155,34 @@
       <div id="Events" class="tabcontent">
 
         <h3>Add Events</h3>
-        <div class="month">      
-            <ul>
-              <li class="prev">&#10094;</li>
-              <li class="next">&#10095;</li>
-              <li>
-                April<br>
-                <span style="font-size:18px">2023</span>
-              </li>
-            </ul>
-          </div>
-          
-          <ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
-          </ul>
-          
-          <ul class="days">  
-            <li>1</li>
-            <li>2</li>
-            <li><span class="active">3</span></li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</span></li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-          </ul>
-        
-          
-        <div class="Addbuttons">
-            
-          <button class="btn more" onclick="openEForm()">Add Event</button>
+        <!-- (A) PERIOD SELECTOR -->
+        <div id="calPeriod">
+          <input id="calBack" type="button" value="&lt;">
+          <select id="calMonth"></select>
+          <input type="number" id="calYear">
+          <input id="calNext" type="button" value="&gt;">
         </div>
 
-        <div class="form popup" id="eveForm">
-          <form action="">
-        
-            <label for="eventName"> Event Name</label>
-            <input type="text" id="eventName" name="eventName" placeholder="Enter the name of event..">
+        <!-- (B) CALENDAR -->
+        <div id="calWrap"></div>
 
-            <label for="eventDate">Event Date</label>
-            <input type="text" id="eventDate" name="eventDate" placeholder="Enter the date of event..">
+        <!-- (C) EVENT FORM -->
+        <dialog id="calForm"><form method="dialog">
+          <div id="evtClose">X</div>
+          <h2>CALENDAR EVENT</h2>
+          <label>Date</label>
+          <input type="text" id="evtDate" readonly>
+          <label>Details</label>
+          <textarea id="evtTxt" required></textarea>
+
+          <input id="evtDel" type="button" value="Delete">
+          <input id="evtSave" type="submit" value="Save">
+        </form></dialog>
+        <script src="calendar.js"></script>
         
-            <input type="submit" value="Submit">
         
-          </form>
-        </div>
-        <script>
-          function openEForm() {
-            document.getElementById("eveForm").style.display = "block";
-          }
-          
-          function closeEForm() {
-            document.getElementById("eveForm").style.display = "none";
-          }
-          </script>
+        
+        
       </div>
       
       <div id="Anecdotes" class="tabcontent">
